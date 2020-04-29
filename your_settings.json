@@ -2,8 +2,8 @@
     "token": "NzAxNDYwOTc0NDkzODkyNzM5.XqkKYQ.XkdCX4ydztnvFTdqXD6J3GPgx6c",
     "prefix": "!",
     "rainbowdelay": 100,
-    "rainbowcommand": "rainbow",
-    "rainbowstop": "stop",
+    "rainbowcommand": "chạy",
+    "rainbowstop": "dừng",
     "rainbowrole": [
         "#9400D3",
         "#4B0082",
