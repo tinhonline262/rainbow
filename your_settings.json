@@ -1,7 +1,7 @@
 {
     "token": "NzAxNDYwOTc0NDkzODkyNzM5.XqkKYQ.XkdCX4ydztnvFTdqXD6J3GPgx6c",
     "prefix": "!",
-    "rainbowdelay": 200,
+    "rainbowdelay": 100,
     "rainbowcommand": "rainbow",
     "rainbowstop": "stop",
     "rainbowrole": [
@@ -15,8 +15,8 @@
     ],
     "messageresponse": {
         "missingperm": "I need permission 'MANAGE_ROLES' to execute this action.",
-        "success": "WOOHOO LETS RAINBOW!!!",
-        "rainbowstop": "Ok ranbow is over",
-        "rolenotfound": "The requested role you typed was not found"
+        "success": "Cầu Vòng Role Okkkkk",
+        "rainbowstop": "Kết thúc cầu vòng role",
+        "rolenotfound": "hmmmmmmmmmm"
     }
 }
