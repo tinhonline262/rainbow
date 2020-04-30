@@ -13,7 +13,7 @@ class Bot {
         
         this.discordClient.on("message", (msg) => {this.processMessage(msg)});
         
-        this.discordClient.login(process.env.token);
+        this.discordClient.login(process.env.NjI0NTI1MzQwNTU0ODIxNjQz.XqpT4A.KXrmZ3rIKmbsusOeB2jznb5iJYI);
     }
     
     initialize() {
