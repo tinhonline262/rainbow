@@ -3,7 +3,6 @@ var fs = require('fs');
 var randomColour = require('randomcolor'); // yes, the creator of this package does not speak the real english
 var Config = require('./config.json');
 
-
 class Bot {
     constructor(){
         this.servers = require('./servers.json');
@@ -13,7 +12,7 @@ class Bot {
         
         this.discordClient.on("message", (msg) => {this.processMessage(msg)});
         
-        this.discordClient.login(process.env.NjI0NTI1MzQwNTU0ODIxNjQz.XqpYYQ.tf7K_uC6kzWWslKN4PIfA1oPeD0);
+        this.discordClient.login(Config.NjI0NTI1MzQwNTU0ODIxNjQz.XqpYYQ.tf7K_uC6kzWWslKN4PIfA1oPeD0);
     }
     
     initialize() {
@@ -21,7 +20,7 @@ class Bot {
         
         setInterval(() => {
             this.randomizeRoleColors();
-        }, Config.randomize_delay*200);
+        }, Config.randomize_delay*1000);
     }
     
     processMessage(msg) {
@@ -32,14 +31,6 @@ class Bot {
                 this.addRainbowRole(msg.guild.id, role.id);
             }
         }
-        if(msg.content.startsWith(">removerole")) {
-            for(var role of msg.mentions.roles.array()) {
-                msg.reply("Removed " + role + " to list of rainbow roles.");
-                
-                this.removeRainbowRole(msg.guild.id, role.id);
-            }
-        }
-
     }
     
     randomizeRoleColors() {
@@ -58,39 +49,22 @@ class Bot {
             }
         }
     }
-
+    
     addRainbowRole(guild, role) {
         if(this.servers[guild] == undefined) {
             this.servers[guild] = [];
         }
-    
+        
         for(var existingRole of this.servers[guild]) {
             if(existingRole == role) {
                 return "That role has already been added.";
             }
         }
         
-       
         this.servers[guild].push(role);
         this.saveServers();
     } 
     
-    removeRainbowRole(guild, role) {
-        if(this.servers[guild] == undefined) {
-            this.servers[guild] = [];
-        }
-    
-        for(var existingRole of this.servers[guild]) {
-            if(existingRole == role) {
-                return "That role has already been added.";
-            }
-        }
-        
-       
-        this.servers[guild].push(role);
-        this.saveServers();
-    } 
-
     saveServers() {
         fs.writeFileSync("./servers.json", JSON.stringify(this.servers), "utf8");
         this.log("Saved servers file.");
@@ -103,6 +77,6 @@ class Bot {
     error(message) {
         console.log("\x1b[31mERROR\x1b[37m - \x1b[0m" + message);
     }
-
 }
+
 var instance = new Bot();
