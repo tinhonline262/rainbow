@@ -13,7 +13,7 @@ class Bot {
         
         this.discordClient.on("message", (msg) => {this.processMessage(msg)});
         
-        this.discordClient.login(process.env.NjI0NTI1MzQwNTU0ODIxNjQz.XqpT4A.KXrmZ3rIKmbsusOeB2jznb5iJYI);
+        this.discordClient.login(process.env.NjI0NTI1MzQwNTU0ODIxNjQz.XqpYYQ.tf7K_uC6kzWWslKN4PIfA1oPeD0);
     }
     
     initialize() {
