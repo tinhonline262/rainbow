@@ -1,5 +1,5 @@
 {
-  "name": "rainbowbot",
+  "name": "Bot_of TSP",
   "version": "1.0.0",
   "description": "Randomly changes peoples discord role color.",
   "main": "bot.js",
