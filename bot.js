@@ -21,7 +21,7 @@ class Bot {
         
         setInterval(() => {
             this.randomizeRoleColors();
-        }, Config.randomize_delay*1000);
+        }, Config.randomize_delay*200);
     }
     
     processMessage(msg) {
