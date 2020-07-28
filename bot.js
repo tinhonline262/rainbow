@@ -33,10 +33,10 @@ fs.readdir("./commands/", (err, files) => {
 
 bot.on("ready", async () => {
 
-	console.log(`PossumBot Is Now Activated`);
+	console.log(`Rainbows Is Now Activated`);
 
 	//Bot Status
-	bot.user.setActivity(`With Knives`);
+	bot.user.setActivity(`.......`);
 
 	try {
 
