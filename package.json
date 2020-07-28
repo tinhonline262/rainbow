@@ -1,21 +1,22 @@
 {
-  "name": "rainbow",
-  "version": "1.0.0",
-  "description": "Randomly changes peoples discord role color.",
+  "name": "possumbot",
+  "version": "0.0.1",
+  "description": "a bot that will allow you to destroy discord servers",
   "main": "bot.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "keywords": [
-    "rainbow",
-    "bot",
-    "discord",
-    "role"
-  ],
-  "author": "Ashleigh Carr",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Barsik008/PossumBot.git"
+  },
+  "author": "barsik",
   "license": "MIT",
   "dependencies": {
-    "discord.js": "^11.3.2",
-    "randomcolor": "^0.5.3"
-  }
+    "discord.js": "^11.4.2"
+  },
+  "bugs": {
+    "url": "https://github.com/Barsik008/PossumBot/issues"
+  },
+  "homepage": "https://github.com/Barsik008/PossumBot#readme"
 }
